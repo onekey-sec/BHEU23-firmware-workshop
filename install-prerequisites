@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo apt install -y unblob qemu-system jq can-utils bridge-utils
+pip install --user -U plotly

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+curl 'https://www.phoenixcontact.com/product/product/api/v1/MTEzOTAxMg/downloads/8108095/license-terms?_realm=be&_locale=en-BE' -s -H 'accept: application/json' -H 'content-type: application/json' -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36' --data-raw '{"acceptLicenseTerms":true}' --compressed | jq -r '.url' | xargs -n 1 wget -O CHARX-SEC-Software-Bundle-V142.raucb
+
+sha256sum -c CHARX-SEC-Software-Bundle-V142.raucb.sum

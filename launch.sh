@@ -12,7 +12,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 qemu-system-arm -M virt,highmem=off \
-  -m ${AVAILABLE_MEM_GB}G -smp ${CPU_CORES} -cpu cortex-a7 \
+  -m 2G -smp 2 -cpu cortex-a7 \
   -kernel zImage \
   -device virtio-scsi-device \
   -device scsi-hd,drive=SystemDisk \
